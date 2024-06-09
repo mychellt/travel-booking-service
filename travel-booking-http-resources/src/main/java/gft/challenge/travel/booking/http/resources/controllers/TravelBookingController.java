@@ -1,7 +1,7 @@
 package gft.challenge.travel.booking.http.resources.controllers;
 
 import gft.challenge.travel.booking.core.business.BookTravelReservationPort;
-import gft.challenge.travel.booking.domain.TravelBooking;
+import gft.challenge.travel.booking.domain.Travel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,7 +21,7 @@ public class TravelBookingController {
 
 
   @PostMapping
-  public ResponseEntity<Void> book(@RequestBody final TravelBooking body) {
+  public ResponseEntity<Void> book(@RequestBody final Travel body) {
     return null;
   }
 

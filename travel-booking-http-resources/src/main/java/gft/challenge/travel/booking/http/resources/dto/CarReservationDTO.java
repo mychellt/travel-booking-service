@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -14,8 +16,8 @@ public class CarReservationDTO {
   private String plate;
 
   @JsonAlias(value = "pickup_date")
-  private String pickupDate;
+  private LocalDateTime pickupDate;
 
   @JsonAlias(value = "return_date")
-  private String returnDate;
+  private LocalDateTime returnDate;
 }
