@@ -5,7 +5,7 @@ import gft.challenge.travel.booking.core.command.Context;
 import gft.challenge.travel.booking.core.messaging.CarReservationMessagePublisherPort;
 import gft.challenge.travel.booking.core.messaging.FlightReservationMessagePublisherPort;
 import gft.challenge.travel.booking.core.messaging.HotelReservationMessagePublisherPort;
-import gft.challenge.travel.booking.core.persistence.TravelBookingRepositoryPort;
+import gft.challenge.travel.booking.core.persistence.TravelRepositoryPort;
 import gft.challenge.travel.booking.domain.Travel;
 import org.springframework.stereotype.Service;
 
@@ -17,12 +17,12 @@ public class BookTravelReservationAdapter implements BookTravelReservationPort {
   private final HotelReservationMessagePublisherPort hotelReservationMessagePublisherPort;
   private final FlightReservationMessagePublisherPort flightReservationMessagePublisherPort;
 
-  private final TravelBookingRepositoryPort repository;
+  private final TravelRepositoryPort repository;
 
   public BookTravelReservationAdapter(final CarReservationMessagePublisherPort carReservationMessagePublisherPort,
                                       final HotelReservationMessagePublisherPort hotelReservationMessagePublisherPort,
                                       final FlightReservationMessagePublisherPort flightReservationMessagePublisherPort,
-                                      final TravelBookingRepositoryPort repository) {
+                                      final TravelRepositoryPort repository) {
     this.carReservationMessagePublisherPort = carReservationMessagePublisherPort;
     this.hotelReservationMessagePublisherPort = hotelReservationMessagePublisherPort;
     this.flightReservationMessagePublisherPort = flightReservationMessagePublisherPort;
