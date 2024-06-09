@@ -87,6 +87,12 @@
 				<artifactId>travel-booking-http-resources</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+
+			<dependency>
+				<groupId>gft.challenge</groupId>
+				<artifactId>travel-booking-messaging-rabbitmq</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -138,7 +144,9 @@
 		<module>travel-booking-core</module>
 		<module>travel-booking-persistence</module>
 		<module>travel-booking-http-resources</module>
-	</modules>
+        <module>travel-booking-processor</module>
+        <module>travel-booking-messaging-rabbitmq</module>
+    </modules>
 
 
 </project>
