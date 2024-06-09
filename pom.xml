@@ -93,6 +93,12 @@
 				<artifactId>travel-booking-messaging-rabbitmq</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+
+			<dependency>
+				<groupId>gft.challenge</groupId>
+				<artifactId>travel-booking-processor</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 

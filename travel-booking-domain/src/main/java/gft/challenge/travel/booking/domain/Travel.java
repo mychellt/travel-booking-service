@@ -12,4 +12,5 @@ public class Travel {
   private Flight flight;
   private Car car;
   private Hotel hotel;
+  private Status status;
 }

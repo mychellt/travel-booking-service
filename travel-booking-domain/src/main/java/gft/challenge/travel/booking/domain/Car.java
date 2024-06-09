@@ -13,4 +13,5 @@ public class Car {
   private String plate;
   private LocalDateTime pickupDate;
   private LocalDateTime returnDate;
+  private boolean confirmed;
 }

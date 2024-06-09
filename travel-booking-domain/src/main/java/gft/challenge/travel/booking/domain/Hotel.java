@@ -15,4 +15,5 @@ public class Hotel {
   private LocalDateTime checkInDate;
   private LocalDateTime checkOutDate;
   private Integer numberOfRooms;
+  private boolean confirmed;
 }

@@ -13,4 +13,5 @@ import java.util.UUID;
 public class Flight {
   private UUID id;
   private List<Integer> seats;
+  private boolean confirmed;
 }

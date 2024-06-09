@@ -32,6 +32,11 @@
             <artifactId>travel-booking-messaging-rabbitmq</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>gft.challenge</groupId>
+            <artifactId>travel-booking-processor</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
