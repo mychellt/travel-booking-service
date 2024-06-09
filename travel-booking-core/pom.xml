@@ -15,8 +15,7 @@
    <dependencies>
        <dependency>
            <groupId>gft.challenge</groupId>
-           <artifactId>travel-booking-service-domain</artifactId>
-           <version>0.0.1-SNAPSHOT</version>
+           <artifactId>travel-booking-domain</artifactId>
        </dependency>
    </dependencies>
 

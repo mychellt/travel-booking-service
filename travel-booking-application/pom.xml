@@ -11,10 +11,74 @@
 
     <artifactId>travel-booking-application</artifactId>
 
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>gft.challenge</groupId>
+            <artifactId>travel-booking-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>gft.challenge</groupId>
+            <artifactId>travel-booking-persistence</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>gft.challenge</groupId>
+            <artifactId>travel-booking-http-resources</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <finalName>travel-booking</finalName>
+
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>META-INF/**</include>
+                    <include>application.properties</include>
+                </includes>
+            </resource>
+        </resources>
+
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                            <goal>build-info</goal>
+                        </goals>
+                        <configuration>
+                            <finalName>app</finalName>
+                            <classifier>travel-booking-application</classifier>
+                            <mainClass>gft.challenge.travel.booking.application.Application</mainClass>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-spring-boot-application-file</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target name="copy application to parent target">
+                                <copy file="target/app-travel-booking-application.jar" tofile="../target/travel-booking.jar"/>
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
