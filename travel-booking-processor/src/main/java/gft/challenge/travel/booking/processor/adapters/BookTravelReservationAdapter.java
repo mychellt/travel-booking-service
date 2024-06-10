@@ -6,6 +6,7 @@ import gft.challenge.travel.booking.core.messaging.CarReservationMessagePublishe
 import gft.challenge.travel.booking.core.messaging.FlightReservationMessagePublisherPort;
 import gft.challenge.travel.booking.core.messaging.HotelReservationMessagePublisherPort;
 import gft.challenge.travel.booking.core.persistence.TravelRepositoryPort;
+import gft.challenge.travel.booking.domain.Status;
 import gft.challenge.travel.booking.domain.Travel;
 import org.springframework.stereotype.Service;
 
@@ -36,12 +37,13 @@ public class BookTravelReservationAdapter implements BookTravelReservationPort {
     travel.getCar().setConfirmed(Boolean.FALSE);
     travel.getFlight().setConfirmed(Boolean.FALSE);
     travel.getHotel().setConfirmed(Boolean.FALSE);
+    travel.setStatus(Status.PENDING);
 
     travel = repository.save(travel);
 
-    carReservationMessagePublisherPort.send(travel.getCar());
-    hotelReservationMessagePublisherPort.send(travel.getHotel());
-    flightReservationMessagePublisherPort.send(travel.getFlight());
+    carReservationMessagePublisherPort.send(travel);
+    hotelReservationMessagePublisherPort.send(travel);
+    flightReservationMessagePublisherPort.send(travel);
 
     return Optional.of(travel);
   }

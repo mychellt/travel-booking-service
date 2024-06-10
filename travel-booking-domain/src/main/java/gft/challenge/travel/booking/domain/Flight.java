@@ -11,7 +11,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Data
 public class Flight {
-  private UUID id;
+  private UUID flightId;
   private List<Integer> seats;
   private boolean confirmed;
 }

@@ -23,7 +23,11 @@ public class FlightResevationDetailsEntity {
   private boolean confirmed;
 
   @Column(name = "flight_id")
-  private UUID hotelId;
+  private UUID flightId;
 
   private String seats;
+
+  @OneToOne
+  @JoinColumn(name = "travel_id", columnDefinition = "id")
+  private TravelEntity travel;
 }

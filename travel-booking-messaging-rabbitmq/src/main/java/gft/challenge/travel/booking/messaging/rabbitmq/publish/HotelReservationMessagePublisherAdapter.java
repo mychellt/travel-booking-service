@@ -2,6 +2,7 @@ package gft.challenge.travel.booking.messaging.rabbitmq.publish;
 
 import gft.challenge.travel.booking.core.messaging.HotelReservationMessagePublisherPort;
 import gft.challenge.travel.booking.domain.Hotel;
+import gft.challenge.travel.booking.domain.Travel;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -20,7 +21,7 @@ public class HotelReservationMessagePublisherAdapter implements HotelReservation
   }
 
   @Override
-  public void send(Hotel obj) {
-    rabbitTemplate.convertAndSend(hotelReservationQueue, obj);
+  public void send(final Travel travel) {
+    rabbitTemplate.convertAndSend(hotelReservationQueue, travel);
   }
 }

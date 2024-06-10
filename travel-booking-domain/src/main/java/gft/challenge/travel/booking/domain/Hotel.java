@@ -11,7 +11,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Data
 public class Hotel {
-  private UUID id;
+  private UUID hotelId;
   private LocalDateTime checkInDate;
   private LocalDateTime checkOutDate;
   private Integer numberOfRooms;

@@ -20,16 +20,13 @@ public class TravelEntity {
   @Column(columnDefinition = "UUID")
   private UUID id;
 
-  @ManyToOne
-  @JoinColumn(name = "car_resevation_details_id")
+  @OneToOne(cascade = CascadeType.ALL, mappedBy = "travel")
   private CarResevationDetailsEntity carResevationDetails;
 
-  @ManyToOne
-  @JoinColumn(name = "hotel_resevation_details_id")
+  @OneToOne(cascade = CascadeType.ALL, mappedBy = "travel")
   private HotelResevationDetailsEntity hotelResevationDetails;
 
-  @ManyToOne
-  @JoinColumn(name = "flight_resevation_details_id")
+  @OneToOne(cascade = CascadeType.ALL, mappedBy = "travel")
   private FlightResevationDetailsEntity flightResevationDetails;
 
   @Column(name = "customer_name")

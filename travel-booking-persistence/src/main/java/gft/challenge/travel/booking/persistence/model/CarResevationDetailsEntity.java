@@ -28,4 +28,8 @@ public class CarResevationDetailsEntity {
 
   @Column(name = "return_date")
   private LocalDateTime returnDate;
+
+  @OneToOne
+  @JoinColumn(name = "travel_id", columnDefinition = "id")
+  private TravelEntity travel;
 }

@@ -1,5 +1,6 @@
 package gft.challenge.travel.booking.persistence.model;
 
+import gft.challenge.travel.booking.domain.Travel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -31,4 +32,8 @@ public class HotelResevationDetailsEntity {
 
   @Column(name = "check_out_date")
   private LocalDateTime checkOutDate;
+
+  @OneToOne
+  @JoinColumn(name = "travel_id", columnDefinition = "id")
+  private TravelEntity travel;
 }
