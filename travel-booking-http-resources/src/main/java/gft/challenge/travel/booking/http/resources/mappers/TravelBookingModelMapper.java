@@ -16,6 +16,7 @@ public interface TravelBookingModelMapper {
   @Mapping(source = "hotelResevation.id", target = "hotel.hotelId")
   @Mapping(source = "hotelResevation.checkInDate", target = "hotel.checkInDate")
   @Mapping(source = "hotelResevation.checkOutDate", target = "hotel.checkOutDate")
+  @Mapping(source = "hotelResevation.numberOfRooms", target = "hotel.numberOfRooms")
   @Mapping(source = "carReservation.plate", target = "car.plate")
   @Mapping(source = "carReservation.pickupDate", target = "car.pickupDate")
   @Mapping(source = "carReservation.returnDate", target = "car.returnDate")

@@ -1,6 +1,5 @@
 package gft.challenge.travel.booking.messaging.rabbitmq.consumer;
 
-import gft.challenge.travel.booking.core.messaging.FlightReservationConfirmationConsumerPort;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 

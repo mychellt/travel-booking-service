@@ -33,6 +33,9 @@ public class HotelResevationDetailsEntity {
   @Column(name = "check_out_date")
   private LocalDateTime checkOutDate;
 
+  @Column(name = "number_of_rooms")
+  private Integer numberOfRooms;
+
   @OneToOne
   @JoinColumn(name = "travel_id", columnDefinition = "id")
   private TravelEntity travel;
