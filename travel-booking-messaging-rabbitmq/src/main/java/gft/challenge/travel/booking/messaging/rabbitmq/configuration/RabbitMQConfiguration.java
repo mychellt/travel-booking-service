@@ -21,9 +21,23 @@ public class RabbitMQConfiguration {
   @Value(value = "${app.messaging.flight-reservation-queue}")
   private String flightReservationQueue;
 
+  @Value(value = "${app.messaging.car-reservation-confirmation-queue}")
+  private String carReservationConfirmationQueue;
+
+  @Value(value = "${app.messaging.flight-reservation-confirmation-queue}")
+  private String flightReservationConfirmationQueue;
+
+  @Value(value = "${app.messaging.hotel-reservation-confirmation-queue}")
+  private String hotelReservationConfirmationQueue;
+
   @Bean
   public Queue carReservationQueue() {
     return new Queue(carReservationQueue, Boolean.TRUE);
+  }
+
+  @Bean
+  public Queue carReservationConfirmationQueue() {
+    return new Queue(carReservationConfirmationQueue, Boolean.TRUE);
   }
 
   @Bean
@@ -32,8 +46,18 @@ public class RabbitMQConfiguration {
   }
 
   @Bean
+  public Queue hotelReservationConfirmationQueue() {
+    return new Queue(hotelReservationConfirmationQueue, Boolean.TRUE);
+  }
+
+  @Bean
   public Queue flightReservationQueue() {
     return new Queue(flightReservationQueue, Boolean.TRUE);
+  }
+
+  @Bean
+  public Queue flightReservationConfirmationQueue() {
+    return new Queue(flightReservationConfirmationQueue, Boolean.TRUE);
   }
 
   @Bean
