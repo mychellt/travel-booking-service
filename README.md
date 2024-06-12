@@ -60,8 +60,8 @@ The JSON body below contains comprehensive information for a complete reservatio
     },
     "customer_details": {
         "name": "Mychell Teixeira de Araújo",
-        "email": "mychellt@gmail.com",
-        "phone": "+5584996057585"
+        "email": "mychellt@dev.com",
+        "phone": "+5584999999999"
     },
     "flight_reservation": {
         "id": "c573f07b-3c30-4c22-91b5-712e06ba46ea",
