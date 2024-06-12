@@ -107,5 +107,7 @@ This command will:
 - **Start all the project services configured to run in Docker containers.**
 
 
+## System Design
 
+<img src="travel-booking-application/src/main/resources/images/system_design.png">
 
